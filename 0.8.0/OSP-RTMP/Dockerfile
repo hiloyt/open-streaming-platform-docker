@@ -48,7 +48,7 @@ RUN cd /tmp && \
 
 # Make OSP Install Directory
 RUN mkdir -p /opt/osp-rtmp
-RUN cp /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp /opt/osp/
+RUN cp /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp /opt/osp-rtmp/
 
 # Transfer OSP Docker Files
 COPY entrypoint.sh /opt/osp-rtmp
