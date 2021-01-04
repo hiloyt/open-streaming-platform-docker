@@ -51,7 +51,7 @@ COPY supervisord.conf /run
 
 # Download OSP from Repo
 RUN cd /tmp && \
-  wget "https://gitlab.com/Deamos/flask-nginx-rtmp-manager/-/archive/beta6d/flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz" && \
+  wget "https://gitlab.com/Deamos/flask-nginx-rtmp-manager/-/archive/${OSP_VERSION}/flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz" && \
   tar zxf flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz && \
   rm flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz
 
