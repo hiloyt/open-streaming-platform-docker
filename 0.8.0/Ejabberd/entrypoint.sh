@@ -8,6 +8,7 @@ sed -i "s/CHANGEME/$EJABBERD_DOMAIN/g" /usr/local/ejabberd/conf/ejabberd.yml
 
 export OSP_API_PROTOCOL
 export OSP_API_DOMAIN
+export EJABBERD_PASSWORD
 
 sed -i "s/protocol = \"http\"/protocol=\"$OSP_API_PROTOCOL\"/g" /usr/local/ejabberd/conf/auth_osp.py
 sed -i "s/ospAPIServer = \"127.0.0.1:5010\"/ospAPIServer=\"$OSP_API_DOMAIN\"/g" /usr/local/ejabberd/conf/auth_osp.py
