@@ -41,10 +41,13 @@ ENV TZ=$DEFAULT_TZ
 RUN apk add --no-cache bash
 
 # Download OSP from Repo
-RUN cd /tmp && \
-  wget "https://gitlab.com/Deamos/flask-nginx-rtmp-manager/-/archive/${OSP_VERSION}/flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz" && \
-  tar zxf flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz && \
-  rm flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz
+#RUN cd /tmp && \
+#  wget "https://gitlab.com/Deamos/flask-nginx-rtmp-manager/-/archive/${OSP_VERSION}/flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz" && \
+#  tar zxf flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz && \
+#  rm flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz
+
+# Clone Branch Instead
+RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git && cd flask-nginx-rtmp-manager && git checkout nightly
 
 # Make OSP Install Directory
 RUN mkdir -p /opt/osp-edge

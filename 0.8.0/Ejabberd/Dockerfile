@@ -50,10 +50,14 @@ COPY entrypoint.sh /run
 COPY supervisord.conf /run
 
 # Download OSP from Repo
-RUN cd /tmp && \
-  wget "https://gitlab.com/Deamos/flask-nginx-rtmp-manager/-/archive/${OSP_VERSION}/flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz" && \
-  tar zxf flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz && \
-  rm flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz
+#RUN cd /tmp && \
+#  wget "https://gitlab.com/Deamos/flask-nginx-rtmp-manager/-/archive/${OSP_VERSION}/flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz" && \
+#  git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git
+#  tar zxf flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz && \
+#  rm flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz
+
+# Clone Branch Instead
+RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git && cd flask-nginx-rtmp-manager && git checkout nightly
 
 # Install Nginx Proxy
 RUN cd /tmp && \
