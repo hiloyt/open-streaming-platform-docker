@@ -85,6 +85,7 @@ RUN cp /tmp/flask-nginx-rtmp-manager/installs/nginx-core/nginx.conf /usr/local/n
 #RUN wget -O /tmp/ejabberd-${EJABBERD_VERSION}-linux-x64.run "https://www.process-one.net/downloads/downloads-action.php?file=/${EJABBERD_VERSION}/ejabberd-${EJABBERD_VERSION}-linux-x64.run"
 #RUN chmod +x /tmp/ejabberd-${EJABBERD_VERSION}-linux-x64.run
 #RUN cd /tmp && ejabberd-${EJABBERD_VERSION}-linux-x64.run --unattendedmodeui none --mode unattended --prefix /usr/local/ejabberd --cluster 0
+RUN apk update
 RUN apk add ejabberd
 RUN mkdir /usr/local/ejabberd/conf
 
