@@ -82,9 +82,10 @@ RUN mkdir /usr/local/nginx/conf/locations
 RUN cp /tmp/flask-nginx-rtmp-manager/installs/nginx-core/nginx.conf /usr/local/nginx/conf/locations/
 
 # Install ejabberd
-RUN wget -O /tmp/ejabberd-${EJABBERD_VERSION}-linux-x64.run "https://www.process-one.net/downloads/downloads-action.php?file=/${EJABBERD_VERSION}/ejabberd-${EJABBERD_VERSION}-linux-x64.run"
-RUN chmod +x /tmp/ejabberd-${EJABBERD_VERSION}-linux-x64.run
-RUN cd /tmp && ejabberd-${EJABBERD_VERSION}-linux-x64.run --unattendedmodeui none --mode unattended --prefix /usr/local/ejabberd --cluster 0
+#RUN wget -O /tmp/ejabberd-${EJABBERD_VERSION}-linux-x64.run "https://www.process-one.net/downloads/downloads-action.php?file=/${EJABBERD_VERSION}/ejabberd-${EJABBERD_VERSION}-linux-x64.run"
+#RUN chmod +x /tmp/ejabberd-${EJABBERD_VERSION}-linux-x64.run
+#RUN cd /tmp && ejabberd-${EJABBERD_VERSION}-linux-x64.run --unattendedmodeui none --mode unattended --prefix /usr/local/ejabberd --cluster 0
+run apk add ejabberd
 RUN mkdir /usr/local/ejabberd/conf
 
 RUN cp /tmp/flask-nginx-rtmp-manager/installs/ejabberd/setup/ejabberd.yml /usr/local/ejabberd/conf/ejabberd.yml
