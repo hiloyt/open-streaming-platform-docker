@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-sudo cp -u -p /run/ejabberd.yml /home/ejabberd/conf/ejabberd.yml
-sudo cp -u -p /run/auth_osp.py /home/ejabberd/conf/auth_osp.py
+sudo cp -u -p /home/ejabberd/run/ejabberd.yml /home/ejabberd/conf/ejabberd.yml
+sudo cp -u -p /home/ejabberd/run/auth_osp.py /home/ejabberd/conf/auth_osp.py
 
 # Configure ejabberd
 export EJABBERD_DOMAIN

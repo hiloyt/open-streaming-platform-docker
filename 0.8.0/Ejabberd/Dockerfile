@@ -21,12 +21,12 @@ RUN pip install requests
 
 USER 9000
 
-RUN mkdir /files
-COPY docker-files.d/entrypoint.sh /run/entrypoint.sh
-COPY docker-files.d/ejabberd.yml /run/ejabberd.yml
-COPY docker-files.d/auth_osp.py /run/auth_osp.py
+RUN mkdir /home/ejabberd/files
+COPY docker-files.d/entrypoint.sh /home/ejabberd/run/entrypoint.sh
+COPY docker-files.d/ejabberd.yml /home/ejabberd/run/ejabberd.yml
+COPY docker-files.d/auth_osp.py /home/ejabberd/run/auth_osp.py
 
 COPY docker-files.d/inetrc /home/ejabberd/conf/inetrc
 
-RUN chmod +x /run/entrypoint.sh
-ENTRYPOINT ["/bin/sh","-c", "/run/entrypoint.sh"]
+RUN chmod +x /home/ejabberd/run/entrypoint.sh
+ENTRYPOINT ["/bin/sh","-c", "/home/ejabberd/run/entrypoint.sh"]
