@@ -3,7 +3,7 @@ MAINTAINER David Lockwood
 
 ARG EJABBERD_VERSION="20.12"
 ARG NGINX_VERSION=1.17.3
-ARG OSP_VERSION="0.8.2"
+ARG OSP_VERSION="0.8.3"
 ARG DEFAULT_TZ="ETC/UTC"
 
 ARG DEFAULT_EJABBERD_DOMAIN="stream.example.com"
@@ -11,6 +11,7 @@ ARG DEFAULT_EJABBERD_PASSWORD="CHANGEME"
 ARG DEFAULT_OSP_API_PROTOCOL="http"
 ARG DEFAULT_OSP_API_DOMAIN="stream.example.com"
 
+ENV OSP_EJABBED_VERSION="0.8.3"
 ENV EJABBERD_PASSWORD=DEFAULT_EJABBERD_PASSWORD
 ENV EJABBERD_DOMAIN=$DEFAULT_EJABBERD_DOMAIN
 ENV OSP_API_PROTOCOL=$DEFAULT_OSP_API_PROTOCOL
@@ -59,7 +60,7 @@ COPY supervisord.conf /run
 #  rm flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz
 
 # Clone Branch Instead
-RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git && cd flask-nginx-rtmp-manager && git checkout nightly
+RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git && cd flask-nginx-rtmp-manager
 
 # Install Nginx Proxy
 RUN cd /tmp && \
