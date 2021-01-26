@@ -30,4 +30,5 @@ COPY docker-files.d/ejabberd.yml /home/ejabberd/run/ejabberd.yml
 COPY docker-files.d/auth_osp.py /home/ejabberd/run/auth_osp.py
 COPY docker-files.d/inetrc /home/ejabberd/conf/inetrc
 
+USER root
 ENTRYPOINT ["/bin/sh","-c", "/run/entrypoint.sh"]

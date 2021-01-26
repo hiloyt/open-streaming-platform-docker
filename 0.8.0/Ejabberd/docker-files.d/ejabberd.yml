@@ -52,7 +52,7 @@ listen:
       /upload: mod_http_upload
       /ws: ejabberd_http_ws
   -
-    port: 80
+    port: 5280
     ip: "::"
     module: ejabberd_http
     request_handlers:
