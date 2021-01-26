@@ -18,7 +18,7 @@ USER root
 RUN apk add --update python3 py3-pip
 RUN pip3 install --upgrade pip
 RUN pip install requests
-RUN mkdir /run
+
 COPY docker-files.d/entrypoint.sh /run/entrypoint.sh
 RUN chmod +x /run/entrypoint.sh
 
