@@ -19,7 +19,7 @@ RUN apk add --update python3 py3-pip
 RUN pip3 install --upgrade pip
 RUN pip install requests
 
-USER 9000
+USER ejabberd
 
 RUN mkdir /home/ejabberd/files
 COPY docker-files.d/entrypoint.sh /home/ejabberd/run/entrypoint.sh
