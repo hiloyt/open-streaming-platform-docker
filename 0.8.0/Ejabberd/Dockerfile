@@ -18,15 +18,15 @@ USER root
 RUN apk add --update python3 py3-pip
 RUN pip3 install --upgrade pip
 RUN pip install requests
+RUN mkdir /run
+COPY docker-files.d/entrypoint.sh /run/entrypoint.sh
+RUN chmod +x /run/entrypoint.sh
 
 USER ejabberd
 
 RUN mkdir /home/ejabberd/files
-COPY docker-files.d/entrypoint.sh /home/ejabberd/run/entrypoint.sh
 COPY docker-files.d/ejabberd.yml /home/ejabberd/run/ejabberd.yml
 COPY docker-files.d/auth_osp.py /home/ejabberd/run/auth_osp.py
-
 COPY docker-files.d/inetrc /home/ejabberd/conf/inetrc
 
-RUN chmod +x /home/ejabberd/run/entrypoint.sh
 ENTRYPOINT ["/bin/sh","-c", "/home/ejabberd/run/entrypoint.sh"]
