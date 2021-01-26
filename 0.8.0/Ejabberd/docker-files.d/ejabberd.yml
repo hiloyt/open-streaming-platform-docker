@@ -86,7 +86,7 @@ acl:
   loopback:
     ip:
       - ::1/128
-#ALLOWXMLRPC
+      - 0.0.0.0/0
   admin:
      user:
        - "admin@localhost"
