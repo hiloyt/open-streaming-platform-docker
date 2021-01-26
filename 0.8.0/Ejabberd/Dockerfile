@@ -25,7 +25,7 @@ RUN chmod +x /run/entrypoint.sh
 
 USER ejabberd
 
-RUN mkdir /home/ejabberd/files
+RUN mkdir /home/ejabberd/run
 COPY docker-files.d/ejabberd.yml /home/ejabberd/run/ejabberd.yml
 COPY docker-files.d/auth_osp.py /home/ejabberd/run/auth_osp.py
 COPY docker-files.d/inetrc /home/ejabberd/conf/inetrc
