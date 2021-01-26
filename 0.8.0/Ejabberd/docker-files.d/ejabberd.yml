@@ -56,11 +56,7 @@ listen:
     ip: "::"
     module: ejabberd_http
     request_handlers:
-      /admin: ejabberd_web_admin
-      /api: mod_http_api
       /http-bind: mod_bosh
-      /captcha: ejabberd_captcha
-      /upload: mod_http_upload
       /ws: ejabberd_http_ws
       /.well-known/acme-challenge: ejabberd_acme
   -
@@ -89,8 +85,8 @@ acl:
     user_regexp: ""
   loopback:
     ip:
-      - 127.0.0.0/8
       - ::1/128
+#ALLOWXMLRPC
   admin:
      user:
        - "admin@localhost"
