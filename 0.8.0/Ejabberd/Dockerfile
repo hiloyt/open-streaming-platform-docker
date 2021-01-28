@@ -25,6 +25,10 @@ RUN apk add --no-cache bash
 COPY docker-files.d/entrypoint.sh /run/entrypoint.sh
 RUN chmod +x /run/entrypoint.sh
 
+RUN apk add supervisor
+RUN mkdir -p /var/log/supervisor
+COPY docker-files.d/supervisord.conf /run/supervisord.conf
+
 USER ejabberd
 
 RUN mkdir /home/ejabberd/run

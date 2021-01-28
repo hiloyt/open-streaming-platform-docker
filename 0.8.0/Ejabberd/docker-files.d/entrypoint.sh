@@ -23,5 +23,4 @@ sed -i "s/ospAPIServer = \"127.0.0.1:5010\"/ospAPIServer=\"$OSP_API_DOMAIN\"/g" 
 
 export EJABBERD_PASSWORD
 
-/home/ejabberd/bin/ejabberdctl register admin localhost $EJABBERD_PASSWORD
-/home/ejabberd/bin/ejabberdctl foreground
+supervisord --nodaemon --configuration /run/supervisord.conf
