@@ -29,8 +29,8 @@ do
       rtmpString+="allow publish $i;\n"
 done
 
-sed -i "s/#ALLOWRTMP/$rtmpString/g" /usr/local/nginx/conf/services/osp-edge-rtmp.conf >> $OSPLOG 2>&1
-sed -i "s/#ALLOWCORE/$coreString/g" /usr/local/nginx/conf/servers/osp-edge-servers.conf >> $OSPLOG 2>&1
+sed -i "s/#ALLOWRTMP/$rtmpString/g" /usr/local/nginx/conf/services/osp-edge-rtmp.conf
+sed -i "s/#ALLOWCORE/$coreString/g" /usr/local/nginx/conf/servers/osp-edge-servers.conf
 
 
 echo 'Starting OSP'
