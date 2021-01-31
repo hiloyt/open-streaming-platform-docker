@@ -63,9 +63,6 @@ RUN set -x ; \
   addgroup -g 82 -S www-data ; \
   adduser -u 82 -D -S -G www-data www-data && exit 0 ; exit 1
 
-# Set the OSP directory to www-data
-RUN chown -R www-data:www-data /opt/osp-rtmp
-
 # Download NGINX
 RUN cd /tmp && \
   wget https://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz && \
