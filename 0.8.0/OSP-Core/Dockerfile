@@ -67,7 +67,7 @@ RUN apk add --no-cache bash
 #  rm flask-nginx-rtmp-manager-${OSP_VERSION}.tar.gz
 
 # Clone Branch Instead
-RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git && cd flask-nginx-rtmp-manager && git checkout nightly
+RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git && cd flask-nginx-rtmp-manager
 
 # Make OSP Install Directory
 RUN mv /tmp/flask-nginx-rtmp-manager /opt/osp/
