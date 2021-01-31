@@ -122,9 +122,6 @@ RUN apk add ffmpeg
 # Add Dialog (used in osp-config.sh)
 RUN apk add dialog
 
-# Setup Wait-For-It Script
-RUN chmod +x /opt/osp-rtmp/wait-for-it.sh
-
 # Install Supervisor
 RUN apk add supervisor
 RUN mkdir -p /var/log/supervisor
