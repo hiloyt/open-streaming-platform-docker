@@ -51,7 +51,7 @@ RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git 
 
 # Make OSP Install Directory
 RUN mkdir -p /opt/osp-edge
-RUN cp /tmp/flask-nginx-rtmp-manager/installs/osp-edge /opt/osp-edge/
+RUN cp -R /tmp/flask-nginx-rtmp-manager/installs/osp-edge /opt/osp-edge/
 
 # Transfer OSP Docker Files
 COPY entrypoint.sh /opt/osp-edge
