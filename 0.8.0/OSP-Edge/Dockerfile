@@ -128,5 +128,5 @@ RUN mkdir -p /var/log/supervisor
 
 VOLUME ["/var/www", "/usr/local/nginx/conf"]
 
-RUN chmod +x /opt/osp-rtmp/entrypoint.sh
+RUN chmod +x /opt/osp-edge/entrypoint.sh
 ENTRYPOINT ["/bin/sh","-c", "/opt/osp-edge/entrypoint.sh"]
