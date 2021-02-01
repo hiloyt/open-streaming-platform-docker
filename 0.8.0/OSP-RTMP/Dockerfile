@@ -98,8 +98,8 @@ RUN mkdir /usr/local/nginx/conf/servers
 RUN mkdir /usr/local/nginx/conf/services
 RUN cp /tmp/flask-nginx-rtmp-manager/installs/nginx-core/nginx.conf /usr/local/nginx/conf/
 RUN cp /tmp/flask-nginx-rtmp-manager/installs/nginx-core/mime.types /usr/local/nginx/conf/
-RUN cp /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp/setup/osp-rtmp/setup/nginx/servers/* /usr/local/nginx/conf/servers
-RUN cp /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp/setup/osp-rtmp/setup/nginx/services/* /usr/local/nginx/conf/services
+RUN cp /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp/setup/nginx/servers/* /usr/local/nginx/conf/servers
+RUN cp /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp/setup/nginx/services/* /usr/local/nginx/conf/services
 
 
 # Install Python, Gunicorn, and uWSGI
