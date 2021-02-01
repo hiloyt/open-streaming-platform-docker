@@ -56,7 +56,6 @@ RUN cp -R /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp /opt/osp-rtmp/
 # Transfer OSP Docker Files
 COPY entrypoint.sh /opt/osp-rtmp
 COPY supervisord.conf /opt/osp-rtmp
-COPY wait-for-it.sh /opt/osp-rtmp
 
 # Create the www-data user
 RUN set -x ; \
