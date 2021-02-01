@@ -54,8 +54,8 @@ RUN mkdir -p /opt/osp-edge
 RUN cp -R /tmp/flask-nginx-rtmp-manager/installs/osp-edge /opt/osp-edge/
 
 # Transfer OSP Docker Files
-COPY entrypoint.sh /opt/osp-edge
-COPY supervisord.conf /opt/osp-edge
+COPY docker-files.d/entrypoint.sh /opt/osp-edge
+COPY docker-files.d/supervisord.conf /opt/osp-edge
 
 # Create the www-data user
 RUN set -x ; \

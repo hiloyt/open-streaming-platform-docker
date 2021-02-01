@@ -54,8 +54,8 @@ RUN mkdir -p /opt/osp-rtmp
 RUN cp -R /tmp/flask-nginx-rtmp-manager/installs/osp-rtmp /opt/osp-rtmp/
 
 # Transfer OSP Docker Files
-COPY entrypoint.sh /opt/osp-rtmp
-COPY supervisord.conf /opt/osp-rtmp
+COPY docker-files.d/entrypoint.sh /opt/osp-rtmp
+COPY docker-files.d/supervisord.conf /opt/osp-rtmp
 
 # Create the www-data user
 RUN set -x ; \
