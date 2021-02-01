@@ -73,9 +73,9 @@ RUN cd /tmp && git clone https://gitlab.com/Deamos/flask-nginx-rtmp-manager.git 
 RUN mv /tmp/flask-nginx-rtmp-manager /opt/osp/
 
 # Transfer OSP Docker Files
-COPY entrypoint.sh /opt/osp/setup/
-COPY supervisord.conf /opt/osp/setup
-COPY wait-for-it.sh /opt/osp/setup
+COPY docker-files.d/entrypoint.sh /opt/osp/setup/
+COPY docker-files.d/supervisord.conf /opt/osp/setup
+COPY docker-files.d/wait-for-it.sh /opt/osp/setup
 
 # Create the www-data user
 RUN set -x ; \
