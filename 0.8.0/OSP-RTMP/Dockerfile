@@ -128,6 +128,9 @@ RUN apk add dialog
 RUN apk add supervisor
 RUN mkdir -p /var/log/supervisor
 
+EXPOSE 1935
+EXPOSE 9000
+
 VOLUME ["/var/www", "/usr/local/nginx/conf", "/opt/osp-rtmp/conf"]
 
 RUN chmod +x /opt/osp-rtmp/entrypoint.sh

@@ -150,6 +150,8 @@ RUN chmod +x /opt/osp/setup/wait-for-it.sh
 RUN apk add supervisor
 RUN mkdir -p /var/log/supervisor
 
+EXPOSE 80
+
 VOLUME ["/var/www", "/usr/local/nginx/conf", "/opt/osp/conf"]
 
 RUN chmod +x /opt/osp/osp-config.sh

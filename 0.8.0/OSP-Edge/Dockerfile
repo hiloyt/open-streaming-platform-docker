@@ -125,6 +125,9 @@ RUN apk add dialog
 RUN apk add supervisor
 RUN mkdir -p /var/log/supervisor
 
+EXPOSE 1935
+EXPOSE 80
+
 VOLUME ["/var/www", "/usr/local/nginx/conf"]
 
 RUN chmod +x /opt/osp-edge/entrypoint.sh

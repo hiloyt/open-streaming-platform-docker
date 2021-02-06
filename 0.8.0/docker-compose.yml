@@ -11,8 +11,9 @@ services:
     mem_reservation: 256m
 
     ports:
-      - '80:5280'
+      - '5280:5280'
       - '4560:4560'
+      - '5222:5222'
     environment:
       - EJABBERD_PASSWORD="changeme"
       - EJABBERD_DOMAIN="streams.example.com"
@@ -47,6 +48,8 @@ services:
     #  - "traefik.http.routers.streamingapp.tls.domains[0].main=streams.example.com"
     #  - "traefik.http.routers.streamingapp.tls.certresolver=le"
     #  - "traefik.http.services.streamingapp.loadbalancer.server.port=80"
+    ports:
+      - '8088:80'
     environment:
       - OSP_SERVER_ADDRESS="streams.example.com"
       - REDIS_HOST=osp_redis

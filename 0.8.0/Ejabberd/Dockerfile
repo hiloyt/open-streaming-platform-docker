@@ -48,6 +48,10 @@ COPY docker-files.d/ejabberd.yml /home/ejabberd/run/ejabberd.yml
 COPY docker-files.d/auth_osp.py /home/ejabberd/run/auth_osp.py
 COPY docker-files.d/inetrc /home/ejabberd/conf/inetrc
 
+EXPOSE 5222
+EXPOSE 5280
+EXPOSE 4560
+
 VOLUME ["/home/ejabberd/database"]
 
 USER root
