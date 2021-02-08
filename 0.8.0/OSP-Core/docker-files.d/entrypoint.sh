@@ -36,13 +36,13 @@ export OSP_REQUIREVERIFICATION
 echo "requireEmailRegistration=$OSP_REQUIREVERIFICATION" >> /opt/osp/conf/config.py
 echo "debugMode=False" >> /opt/osp/conf/config.py
 export EJABBERDADMIN
-echo "ejabberdAdmin=$EJABBERDADMIN" >> /opt/osp/conf/config.py
+echo "ejabberdAdmin='$EJABBERDADMIN'" >> /opt/osp/conf/config.py
 export EJABBERDPASS
-echo "ejabberdPass=$EJABBERDPASS" >> /opt/osp/conf/config.py
+echo "ejabberdPass='$EJABBERDPASS'" >> /opt/osp/conf/config.py
 export EJABBERDHOST
-echo "ejabberdHost=$EJABBERDHOST" >> /opt/osp/conf/config.py
+echo "ejabberdHost='$EJABBERDHOST'" >> /opt/osp/conf/config.py
 export EJABBERDSERVER
-echo "ejabberdServer=$EJABBERDSERVER" >> /opt/osp/conf/config.py
+echo "ejabberdServer='$EJABBERDSERVER'" >> /opt/osp/conf/config.py
 
 chown -R www-data:www-data /opt/osp/conf/config.py
 echo 'Performing DB Migrations'
