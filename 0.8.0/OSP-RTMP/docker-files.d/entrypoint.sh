@@ -12,13 +12,16 @@ echo 'Setting up Directories'
   mkdir -p /var/log/gunicorn && \
   mkdir -p /var/log/osp && \
   chown -R www-data:www-data /var/www && \
-  chown -R www-data:www-data /var/log/gunicorn
+  chown -R www-data:www-data /var/log/gunicorn && \
+  chown -R www-data:www-data /var/log/osp
 echo 'Setting up OSP Configuration'
 
 export OSPCOREAPI
-echo "dbLocation=$OSPCOREAPI" > /opt/osp-rtmp/conf/config.py
+echo "dbLocation='$OSPCOREAPI'" > /opt/osp-rtmp/conf/config.py
 export FLASK_SECRET
 echo "debugMode=False" >> /opt/osp-rtmp/conf/config.py
+echo "ospCoreAPI='$OSPCOREAPI'" >> /opt/osp-rtmp/conf/config.py
+echo "secretKey='$FLASK_SECRET'" >> /opt/osp-rtmp/conf/config.py
 
 chown -R www-data:www-data /opt/osp-rtmp/conf/config.py
 

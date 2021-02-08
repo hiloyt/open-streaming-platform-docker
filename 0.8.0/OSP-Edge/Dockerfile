@@ -113,7 +113,7 @@ RUN apk add python3 \
 RUN pip3 install --upgrade pip
 
 # Install OSP Dependancies
-RUN pip3 install cryptography
+RUN pip3 install cryptography==3.3.2
 
 # Setup FFMPEG for recordings and Thumbnails
 RUN apk add ffmpeg
