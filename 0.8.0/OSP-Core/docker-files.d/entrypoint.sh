@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo 'Placing Configuration Files'
-cp -u -p /opt/osp/setup/nginx/nginx.conf /usr/local/nginx/conf/
-cp -u -p /opt/osp/setup/nginx/mime.types /usr/local/nginx/conf/
+cp -u -p /opt/osp/installs/nginx-core/nginx.conf /usr/local/nginx/conf/
+cp -u -p /opt/osp/installs/nginx-core/mime.types /usr/local/nginx/conf/
 cp -u -p /opt/osp/setup/nginx/locations/* /usr/local/nginx/conf/locations
 cp -u -p /opt/osp/setup/nginx/upstream/* /usr/local/nginx/conf/upstream
 
