@@ -52,7 +52,7 @@ EXPOSE 5222
 EXPOSE 5280
 EXPOSE 4560
 
+USER root
 VOLUME ["/home/ejabberd/database"]
 
-USER root
 ENTRYPOINT ["/bin/sh","-c", "/run/entrypoint.sh"]
